@@ -39,6 +39,9 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    "jazzmin",
+    "ng_cdf",
+    "accounts",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -58,6 +61,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "ng_cdf_citizen.urls"
+
+AUTH_USER_MODEL = 'accounts.UserProfile'
 
 TEMPLATES = [
     {

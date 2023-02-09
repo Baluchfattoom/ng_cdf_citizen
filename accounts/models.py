@@ -5,7 +5,7 @@ from accounts.utils import UserManager
 class County(models.Model):
     county_name = models.CharField(max_length=80)
     county_code = models.PositiveBigIntegerField()
-    logo = models.ImageField(upload_to='/accounts/counties/logos/')
+    logo = models.ImageField(upload_to='accounts/counties/logos/')
 
     def __str__(self) -> str:
         return self.county
@@ -28,8 +28,8 @@ class UserProfile(AbstractUser):
     last_name = models.CharField(max_length=80)
     bio = models.TextField()
     phone_number = models.CharField(max_length=10, default='07XXXXXXX')
-    national_id = models.PositiveBigIntegerField()
-    location = models.ForeignKey(Location, on_delete=models.CASCADE)
+    national_id = models.PositiveBigIntegerField(default='00000000')
+    # location = models.ForeignKey(Location, on_delete=models.CASCADE, )
     avatar = models.FileField(upload_to='accounts/user/avatar/', null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
