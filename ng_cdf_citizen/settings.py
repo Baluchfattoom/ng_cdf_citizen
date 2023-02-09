@@ -40,11 +40,6 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     "jazzmin",
-<<<<<<< HEAD
-    "ng_cdf",
-    "accounts",
-=======
->>>>>>> fdda34ce18b39e2fae6395d699673b6e9a2d916c
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
