@@ -40,14 +40,19 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     "jazzmin",
+<<<<<<< HEAD
     "ng_cdf",
     "accounts",
+=======
+>>>>>>> fdda34ce18b39e2fae6395d699673b6e9a2d916c
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "ng_cdf",
+    "accounts"
 ]
 
 MIDDLEWARE = [
@@ -115,6 +120,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+AUTH_USER_MODEL = 'accounts.UserProfile'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/

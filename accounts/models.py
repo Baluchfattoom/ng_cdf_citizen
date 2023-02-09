@@ -28,9 +28,15 @@ class UserProfile(AbstractUser):
     last_name = models.CharField(max_length=80)
     bio = models.TextField()
     phone_number = models.CharField(max_length=10, default='07XXXXXXX')
+<<<<<<< HEAD
     national_id = models.PositiveBigIntegerField(default='00000000')
     # location = models.ForeignKey(Location, on_delete=models.CASCADE, )
     avatar = models.FileField(upload_to='accounts/user/avatar/', null=True)
+=======
+    # national_id = models.PositiveBigIntegerField()
+    # location = models.ForeignKey(Location, on_delete=models.CASCADE)
+    avatar = models.FileField(upload_to='accounts/user/avatar/')
+>>>>>>> fdda34ce18b39e2fae6395d699673b6e9a2d916c
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
